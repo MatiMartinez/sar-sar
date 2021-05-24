@@ -58,6 +58,7 @@ const Container = styled.header`
   padding: 0 2rem;
   border-bottom: 1px solid #d7dee0;
   background-color: #ffffff;
+  z-index: 999;
 `
 
 const Nav = styled.nav`

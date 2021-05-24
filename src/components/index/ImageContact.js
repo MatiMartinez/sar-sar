@@ -20,6 +20,7 @@ const ImageContact = () => {
     <Container>
       {/** Image */}
       <CustomGatsbyImage image={desktop} alt="desktop" />
+      <BackImage />
       {/** Wrapper */}
       <TextWrapper>
         <TextInfo>
@@ -39,9 +40,19 @@ const Container = styled.div`
   justify-content: center;
 `
 
+const BackImage = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50%;
+  background-color: #333333;
+`
+
 const CustomGatsbyImage = styled(GatsbyImage)`
   width: 90%;
   height: 300px;
+  z-index: 9;
 `
 
 const TextWrapper = styled.div`
@@ -52,6 +63,7 @@ const TextWrapper = styled.div`
   right: 8rem;
   bottom: 225px;
   width: 25%;
+  z-index: 99;
 `
 
 const TextInfo = styled.span`

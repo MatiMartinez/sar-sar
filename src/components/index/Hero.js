@@ -22,7 +22,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 1.5rem;
+  row-gap: 0.5rem;
   padding: 8rem;
   width: 60%;
 `
@@ -36,6 +36,7 @@ const TextHead = styled.h2`
 const TextTitle = styled.h1`
   font-size: 3rem;
   font-weight: 700;
+  font-family: "IBM Plex Serif", serif;
 `
 
 const TextDescription = styled.p`
