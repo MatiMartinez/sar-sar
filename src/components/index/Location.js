@@ -43,10 +43,24 @@ export default Location
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0;
+  }
 `
 
 const PaddingWrapper = styled.div`
   padding-left: 8rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -56,6 +70,10 @@ const TextWrapper = styled.div`
   row-gap: 2rem;
   background-color: #333333;
   color: #d7dee0;
+
+  @media (max-width: 375px) {
+    padding: 2rem 2rem;
+  }
 `
 
 const TextDescription = styled.p`
@@ -78,6 +96,7 @@ const ButtonToMaps = styled.button`
 
 const ImageWrapper = styled.div`
   position: relative;
+  min-height: 200px;
 `
 
 const CustomGatsbyImage = styled(GatsbyImage)`

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { MdLocationOn } from "react-icons/md"
 
-const TeamHead = () => {
+const AboutHead = () => {
   return (
     <Container>
       <MdLocationOn color="#698c95" size="2rem" />
@@ -11,7 +11,7 @@ const TeamHead = () => {
   )
 }
 
-export default TeamHead
+export default AboutHead
 
 const Container = styled.div`
   display: flex;

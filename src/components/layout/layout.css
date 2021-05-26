@@ -2,9 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;300;400;600;700&display=swap");
 
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -488,9 +485,14 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+
+* {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 12px;
   }
 }
 

@@ -34,9 +34,9 @@ const TextWrapper = styled.div`
 `
 
 const TextTitle = styled.h1`
-  font-size: 1rem;
+  font-size: 1.25rem;
 `
 
 const TextDescription = styled.p`
-  font-size: 0.75rem;
+  font-size: 1rem;
 `

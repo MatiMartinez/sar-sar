@@ -14,14 +14,20 @@ const Navegation = () => {
     setIsOpen(false)
   }
 
+  function handleCloseAfter() {
+    setTimeout(() => {
+      setIsOpen(false)
+    }, 500)
+  }
+
   return (
     <Container>
       <div></div>
       <Menu>
         {isOpen ? (
-          <CgClose onClick={handleClose} />
+          <CgClose onClick={handleClose} size="1.5rem" />
         ) : (
-          <CgMenu onClick={handleOpen} />
+          <CgMenu onClick={handleOpen} size="1.5rem" />
         )}
       </Menu>
       <Nav $isOpen={isOpen}>
@@ -32,8 +38,9 @@ const Navegation = () => {
           duration={500}
           offset={-80}
           to="index"
+          onClick={handleCloseAfter}
         >
-          Inicio
+          inicio
         </NavLink>
         <NavLink
           activeClass="active"
@@ -42,8 +49,9 @@ const Navegation = () => {
           duration={500}
           offset={-80}
           to="services"
+          onClick={handleCloseAfter}
         >
-          Servicios
+          servicios
         </NavLink>
         <NavLink
           activeClass="active"
@@ -52,8 +60,9 @@ const Navegation = () => {
           duration={500}
           offset={-80}
           to="about-us"
+          onClick={handleCloseAfter}
         >
-          Nosotros
+          nosotros
         </NavLink>
         <NavLink
           activeClass="active"
@@ -62,8 +71,9 @@ const Navegation = () => {
           duration={500}
           offset={-80}
           to="contact"
+          onClick={handleCloseAfter}
         >
-          Contacto
+          contacto
         </NavLink>
       </Nav>
     </Container>
@@ -92,6 +102,7 @@ const Menu = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+    height: 1.5rem;
   }
 `
 
@@ -108,17 +119,20 @@ const Nav = styled.nav`
     position: fixed;
     top: 80px;
     left: ${p => (p.$isOpen ? "0" : "-100%")};
-    transition: all 0.3s ease;
+    transition: all 0.5s;
     background-color: #ffffff;
+    box-shadow: ${p =>
+      p.$isOpen ? "rgba(0, 0, 0, 0.24) 0px 3px 8px" : "none"};
   }
 `
 
 const NavLink = styled(Link).attrs(() => ({
   activeClass: "active",
 }))`
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
+  font-variant: small-caps;
   color: #777a7c;
   cursor: pointer;
 
@@ -131,6 +145,7 @@ const NavLink = styled(Link).attrs(() => ({
   }
 
   @media (max-width: 768px) {
-    padding: 1rem 0;
+    font-size: 1.75rem;
+    padding: 1.5rem 0;
   }
 `

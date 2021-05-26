@@ -1,25 +1,25 @@
 import React from "react"
 import styled from "styled-components"
 import Location from "./Location"
-import TeamHead from "./TeamHead"
+import AboutHead from "./AboutHead"
 
-const Team = () => {
+const About = () => {
   return (
     <Container id="about-us">
-      <TeamHead />
+      <AboutHead />
       <Location />
     </Container>
   )
 }
 
-export default Team
+export default About
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 8rem;
-  padding: 8rem 0;
+  row-gap: 4rem;
+  padding: 4rem 0;
   background-color: #d7dee0;
 `

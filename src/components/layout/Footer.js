@@ -6,12 +6,16 @@ const Footer = () => {
     <Container id="contact">
       <TopContainer>
         <TextLogo>Lorem Ipsum</TextLogo>
-        <InformationWrapper>
+        <InformationWrapperRight>
           <TextTitleBold>Horarios</TextTitleBold>
-          <TextText>Lunes a Jueves, 9:00hs-12:30hs / 17:00hs-20:00hs</TextText>
+          <TextText>Lunes, 9:00hs-12:30hs / 17:00hs-20:00hs</TextText>
+          <TextText>Martes, 9:00hs-12:30hs / 17:00hs-20:00hs</TextText>
+          <TextText>Miércoles, 9:00hs-12:30hs / 17:00hs-20:00hs</TextText>
+          <TextText>Jueves, 9:00hs-12:30hs / 17:00hs-20:00hs</TextText>
           <TextText>Viernes, 9:00hs-12:30hs</TextText>
-          <TextText>Sábados y Domingos, Cerrado</TextText>
-        </InformationWrapper>
+          <TextText>Sábados, Cerrado</TextText>
+          <TextText>Domingos, Cerrado</TextText>
+        </InformationWrapperRight>
       </TopContainer>
       <MiddleContainer>
         <TextLogo>Lorem Ipsum</TextLogo>
@@ -51,21 +55,31 @@ const Container = styled.footer`
 const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 3rem 8rem;
+  padding: 3rem 2rem;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
 `
 
 const MiddleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 8rem;
+  padding: 3rem 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+  }
 `
 
 const TextLogo = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   font-style: italic;
 `
@@ -81,10 +95,25 @@ const InformationWrapper = styled.div`
   flex-direction: column;
   align-items: flex-end;
   row-gap: 0.25rem;
+
+  @media (max-width: 576px) {
+    align-items: flex-start;
+  }
+`
+
+const InformationWrapperRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 0.25rem;
+
+  @media (max-width: 576px) {
+    align-items: flex-start;
+  }
 `
 
 const TextTitleBold = styled.h2`
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
 `
 
@@ -92,13 +121,13 @@ const BotContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-  padding: 3rem 8rem;
+  padding: 3rem 2rem;
 `
 
 const TextTitleRegular = styled.h2`
-  font-size: 1rem;
+  font-size: 1.25rem;
 `
 
 const TextText = styled.span`
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 `
