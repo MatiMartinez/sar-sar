@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Hero = () => {
   return (
-    <Container>
+    <Container id="index">
       {/** Text hero */}
       <TextHead>Lorem ipsum dolor sit amet</TextHead>
       <TextTitle>Lorem ipsum dolor sitamet</TextTitle>

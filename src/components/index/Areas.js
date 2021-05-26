@@ -4,7 +4,7 @@ import Area from "./Area"
 
 const Areas = () => {
   return (
-    <Container>
+    <Container id="services">
       <TextTitle>Lorem ipsum dolor sit</TextTitle>
       <AreaWrapper>
         <Area
