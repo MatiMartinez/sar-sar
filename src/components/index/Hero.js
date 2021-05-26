@@ -34,7 +34,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     padding: 0 4rem;
     width: 80%;
-    min-height: calc(100vh - 180px);
+    min-height: calc(90vh - 180px);
   }
 
   @media (max-width: 576px) {

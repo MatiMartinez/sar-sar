@@ -122,7 +122,9 @@ const Nav = styled.nav`
     transition: all 0.5s;
     background-color: #ffffff;
     box-shadow: ${p =>
-      p.$isOpen ? "rgba(0, 0, 0, 0.24) 0px 3px 8px" : "none"};
+      p.$isOpen
+        ? "rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px"
+        : "none"};
   }
 `
 
